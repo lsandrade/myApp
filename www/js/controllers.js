@@ -30,7 +30,7 @@ angular.module('starter.controllers', [])
 .controller('ListCtrl', function($scope){
 })
 
-.controller('FormCtrl', function($scope, $ionicActionSheet, $timeout){
+.controller('FormCtrl', function($scope, $ionicActionSheet, $timeout, $ionicBackdrop){
   $scope.show = function(){
 
     var hideSheet = $ionicActionSheet.show({
@@ -50,6 +50,13 @@ angular.module('starter.controllers', [])
     $timeout(function(){
       hideSheet();
     }, 2000);
+  };
+
+  $scope.backdrop = function(){
+    $ionicBackdrop.retain();
+    $timeout(function(){
+      $ionicBackdrop.release();
+    }, 1500)
   };
 })
 
