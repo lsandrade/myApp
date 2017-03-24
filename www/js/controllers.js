@@ -1,6 +1,21 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicLoading) {
+  $scope.load = function(){
+    $ionicLoading.show({
+        template: "Loading...",
+        duration: 3000
+    }).then(function(){
+      console.log("Load indicator is displayed");
+    });
+  };
+
+  $scope.hide = function(){
+      $ionicLoading.hide().then(function(){
+        console.log('Load indicator hidden');
+      });
+  };
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
