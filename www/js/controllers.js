@@ -63,6 +63,10 @@ angular.module('starter.controllers', [])
     console.log('Refrescando');
     $scope.$broadcast('scroll.refreshComplete');
   };
+
+  $scope.onHold = function(){
+    console.log('Me soltaaaa');
+  }
 })
 
 ;
