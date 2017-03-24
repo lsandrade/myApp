@@ -61,7 +61,15 @@
       <h2>Backdrop</h2>
       <button class="button" ng-click="backdrop()">show backdrop</button>
 
-    <button on-hold="onHold()" class="button">Please dont hold me</button>
+      <h2>Eventos</h2>
+      <button on-hold="onHold()" class="button">Please dont hold me</button>
+      <button on-tap="onTap()" class="button">OnTap</button>
+      <button on-double-tap="onDoubleTap()" class="button">Double tap</button>
+      <button on-touch="onTouch()" class="button">Dont touch</button>
+      <button on-release="onRelease()" class="button">Quando vc me soltar...</button>
+      <button on-drag="onDrag()" class="button">Drag Queen</button>
+
+
 
   </ion-content>
 </ion-view>

@@ -66,7 +66,27 @@ angular.module('starter.controllers', [])
 
   $scope.onHold = function(){
     console.log('Me soltaaaa');
+  };
+
+  $scope.onTap= function(){
+    console.log("Se me ataca eu vou ataca");
+  };
+
+  $scope.onDoubleTap = function(){
+    console.log('Double tap mt again');
+  };
+
+  $scope.onTouch = function(){
+    console.log('Dont touch me, bastard');
+  };
+
+  $scope.onRelease = function(){
+    console.log('agora corre');
   }
+
+  $scope.onDrag = function(){
+    console.log('Estou ficando tonto');
+  };
 })
 
 ;
