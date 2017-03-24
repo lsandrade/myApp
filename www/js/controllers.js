@@ -87,6 +87,17 @@ angular.module('starter.controllers', [])
   $scope.onDrag = function(){
     console.log('Estou ficando tonto');
   };
+
+  $scope.items = [1,2,33,4,5];
+
+  $scope.photos = [
+    'https://edge.alluremedia.com.au/m/k/2016/01/shutterstock-programming.jpg',
+    'https://www.eteki.com/wp-content/uploads/2016/03/Top_4_Trending_Programming_Languages_One_Must_Learn.jpg',
+    'https://cdnp-2f3a.kxcdn.com/blog/wp-content/uploads/2015/04/15-Most-Popular-Programming-Languages-You-Must-Learn-in-2015.png',
+    'http://readwrite.com/wp-content/uploads/programming-languages-for-iot-e1467856370607.jpg',
+    'http://www.boeducation.com/wp-content/uploads/2016/02/programming.jpg',
+    'https://userscontent2.emaze.com/images/86d1baf1-44e7-42d0-ae7f-562640406955/15861e3bb65a4bd6ea7b40f6f6f1795c.jpg'
+  ];
 })
 
 ;

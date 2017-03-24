@@ -1,3 +1,15 @@
+<style>
+    .photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .available-scroller {
+      height: 50px;
+    }
+</style>
+
 <ion-view view-title="List Series">
 
     <ion-nav-bar class="bar-royal">
@@ -77,9 +89,26 @@
             <ion-option-button class="button-positive">Share</ion-option-button>
             <ion-option-button class="button-assertive">Edit</ion-option-button>
           </ion-item>
-          
-      </ion-list>
-</ion-list>
+
+          </ion-list>
+    </ion-list>
+
+      <h2>COllection repeat</h2>
+      <ion-item collection-repeat="item in items">
+        {{item}}
+      </ion-item>
+      <img ng-repeat="photo in photos"
+        width="200px"
+        height="200px"
+        src="{{photo}}">
+      <hr>
+      <h2>Available Programming:</h2>
+      <ion-scroll direction="x" class="available-scroller">
+        <div class="photo" collection-repeat="photo in photos"
+           height="50x" width="50px">
+           <img src="{{photo}}">
+        </div>
+      </ion-scroll>
 
 
 
