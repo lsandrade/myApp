@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $ionicLoading) {
+.controller('DashCtrl', function($scope, $ionicLoading, $ionicModal) {
   $scope.load = function(){
     $ionicLoading.show({
         template: "Loading...",
@@ -15,6 +15,31 @@ angular.module('starter.controllers', [])
         console.log('Load indicator hidden');
       });
   };
+
+  $ionicModal.fromTemplateUrl('templates/modal.html',{
+    scope: $scope,
+    animation: 'side-in-up'
+  }).then(function(modal){
+    $scope.modal = modal;
+  });
+
+  $scope.openModal = function(){
+    $scope.modal.show();
+  };
+
+  $scope.closeModal = function(){
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function(){
+    $scope.modal.remove();
+  });
+
+  //execute a fnction when hide modal
+  $scope.$on('modal.hidden', function(){});
+
+  //execute a function when remove modal
+  $scope.$on('modal.removed', function(){});
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
