@@ -4,6 +4,12 @@
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
   <ion-content>
+
+      <ion-refresher
+        pulling-text="Pull to refresh..."
+        on-refresh="doRefresh()">
+      </ion-refresher>
+
         <div class="list">
             <label class="item item-input">
                 <input type="text" placeholder="First Name">

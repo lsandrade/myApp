@@ -58,6 +58,11 @@ angular.module('starter.controllers', [])
       $ionicBackdrop.release();
     }, 1500)
   };
+
+  $scope.doRefresh = function(){
+    console.log('Refrescando');
+    $scope.$broadcast('scroll.refreshComplete');
+  };
 })
 
 ;
