@@ -1,0 +1,52 @@
+<ion-view view-title="List Series">
+
+    <ion-nav-bar class="bar-royal">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="First Name">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Last Name">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="comments"></textarea>
+            </label>
+            <button class="button button-block button-energized">Enviar</button>
+        </div>
+      <h2>Toggle</h2>
+      <label class="toggle toggle-calm">
+          <input type="checkbox">
+          <div class="track">
+              <div class="handle"></div>
+          </div>
+      </label>
+
+      <h2>Radio Button</h2>
+      <h3>Qual melhor série?</h3>
+      <ion-list>
+          <ion-radio ng-model="choice" ng-value="'A'">
+            Orange is the new Black
+          </ion-radio>
+          <ion-radio ng-model="choice" ng-value="'B'">
+            House of Cards
+          </ion-radio>
+          <ion-radio ng-model="choice" ng-value="'C'">
+            The OA
+          </ion-radio>
+          <ion-radio ng-model="choice" ng-value="'D'">
+            Stranger Things
+          </ion-radio>
+      </ion-list>
+
+      <h2>Range</h2>
+      <h3>Aumente ou abaixe o volume</h3>
+      <div class="item range">
+            <i class="icon ion-volume-low"></i>
+          <input type="range" name="volume">
+          <i class="icon ion-volume-high"></i>
+      </div>
+  </ion-content>
+</ion-view>

@@ -28,6 +28,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ListCtrl', function($scope){
+})
+
+.controller('FormCtrl', function($scope){
 
 })
 
