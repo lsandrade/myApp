@@ -30,8 +30,27 @@ angular.module('starter.controllers', [])
 .controller('ListCtrl', function($scope){
 })
 
-.controller('FormCtrl', function($scope){
+.controller('FormCtrl', function($scope, $ionicActionSheet, $timeout){
+  $scope.show = function(){
 
+    var hideSheet = $ionicActionSheet.show({
+      buttons: [
+        {text: '<b>Share</b> This'},
+        {text: 'Move'}
+      ],
+      destructiveText: 'Delete',
+      titleText: 'Modify your options',
+      cancelText: 'cancel',
+      cancel: function(){},
+      buttonClicked: function(index){
+        return true;
+      }
+    });
+
+    $timeout(function(){
+      hideSheet();
+    }, 2000);
+  };
 })
 
 ;
